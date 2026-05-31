@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>WanderPlan — Live Demo</title>
+<title>Wedding App — Live Demo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -405,7 +405,7 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);font-size
 
 <!-- DEMO BANNER -->
 <div class="demo-banner">
-  ✨ Demo mode — changes reset on refresh &nbsp;·&nbsp; <a href="mailto:hello@wanderplan.app">Want this for your wedding? →</a>
+  ✨ Demo — changes reset on refresh &nbsp;·&nbsp; <a href="mailto:hello@wanderplan.app">Interested in this for your wedding? →</a>
 </div>
 
 
@@ -492,7 +492,7 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);font-size
 </div>
 
 <!-- TRIP INFO EDIT MODAL -->
-<div id="tripInfoModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);padding:16px;align-items:flex-end;justify-content:center;">
+<div id="tripInfoModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);padding:16px 16px 52px;align-items:flex-end;justify-content:center;">
   <div style="background:var(--bg-elev);border:1px solid var(--border);border-radius:16px;padding:20px;max-width:420px;width:100%;box-shadow:var(--shadow-lg);max-height:82vh;display:flex;flex-direction:column;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-shrink:0;">
       <div style="font-size:13px;font-weight:600;color:var(--text);" id="tripInfoModalTitle">Edit</div>
@@ -801,7 +801,7 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);font-size
     <div class="share-title">Your private link</div>
     <div class="share-desc">Full itinerary including private days. Bookmark this or save the file offline.</div>
     <div class="share-url" onclick="copyUrl('full')">
-      <span>wanderplan.app/demo</span>
+      <span>your-wedding.app</span>
       <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
     </div>
     <div class="share-hint">Tap to copy</div>
@@ -810,7 +810,7 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);font-size
     <div class="share-title">Family view link</div>
     <div class="share-desc">Share with guests. Private days hidden automatically. No password needed.</div>
     <div class="share-url" onclick="copyUrl('family')">
-      <span>wanderplan.app/demo?view=family</span>
+      <span>your-wedding.app?view=family</span>
       <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
     </div>
     <div class="share-hint">Tap to copy</div>
@@ -2347,7 +2347,7 @@ function buildPublicList(){
 }
 
 function copyUrl(type){
-  const base='https://wanderplan.app/demo';
+  const base='https://your-wedding.app';
   const url=type==='family'?base+'?view=family':base;
   if(navigator.clipboard)navigator.clipboard.writeText(url).catch(()=>{});
   alert('Copied!');
