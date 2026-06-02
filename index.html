@@ -430,7 +430,7 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);font-size
   <div class="hero-canvas-wrap"><canvas id="heroCanvas"></canvas></div>
   <div class="hero-gradient"></div>
   <div class="hero-inner">
-  <div class="hero-kicker"><span class="pulse-ring"></span>Whistler, BC &mdash; August 2026</div>
+  <div class="hero-kicker"><span class="pulse-ring"></span>Whistler, BC &mdash; July 2026</div>
   <div class="hero-main">
     <div>
       <h1 class="hero-headline">S<em>&amp;</em>K<br>Wedding</h1>
@@ -514,12 +514,12 @@ body{font-family:var(--font-ui);background:var(--bg);color:var(--text);font-size
       <div>
         <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-4);margin-bottom:5px;">Day</div>
         <select id="modalDay" style="width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg-sunken);color:var(--text);font-family:var(--font-ui);font-size:16px;outline:none;">
-          <option value="2026-08-20">Aug 20 — Arrival Day</option>
-          <option value="2026-08-21">Aug 21 — Explore Whistler</option>
-          <option value="2026-08-22">Aug 22 — Wedding Day</option>
-          <option value="2026-08-23">Aug 23 — Post-Wedding Brunch</option>
-          <option value="2026-08-24">Aug 24 — Hike Day</option>
-          <option value="2026-08-25">Aug 25 — Departure</option>
+          <option value="2026-07-20">Jul 20 — Arrival Day</option>
+          <option value="2026-07-21">Jul 21 — Explore Whistler</option>
+          <option value="2026-07-22">Jul 22 — Wedding Day</option>
+          <option value="2026-07-23">Jul 23 — Post-Wedding Brunch</option>
+          <option value="2026-07-24">Jul 24 — Hike Day</option>
+          <option value="2026-07-25">Jul 25 — Departure</option>
         </select>
       </div>
       <div>
@@ -877,12 +877,12 @@ let DAYS=[];
 async function loadDays(){
   // DEMO: hardcoded dummy days
   DAYS=[
-    {id:'8-20',date:'2026-08-20',dateNum:20,dow:'Thu',title:'Arrival Day',sub:'YVR → Whistler',priv:'private',filter:'us',badges:[{cls:'badge-us',lbl:'Us Only'},{cls:'badge-private',lbl:'Private'}]},
-    {id:'8-21',date:'2026-08-21',dateNum:21,dow:'Fri',title:'Explore Whistler',sub:'Village · Gondola · Spa',priv:'public',filter:'tbd',badges:[{cls:'badge-tbd',lbl:'TBD Who Joins'}]},
-    {id:'8-22',date:'2026-08-22',dateNum:22,dow:'Sat',title:'Wedding Day',sub:'Nita Lake Lodge · Whistler',priv:'public',filter:'wedding',badges:[{cls:'badge-wedding',lbl:'Wedding'}]},
-    {id:'8-23',date:'2026-08-23',dateNum:23,dow:'Sun',title:'Post-Wedding Brunch',sub:'Friends + family · 11 AM',priv:'public',filter:'all',badges:[{cls:'badge-all',lbl:'All Family'}]},
-    {id:'8-24',date:'2026-08-24',dateNum:24,dow:'Mon',title:'Hike Day',sub:'Garibaldi Lake · Full day',priv:'private',filter:'us',badges:[{cls:'badge-us',lbl:'Us Only'},{cls:'badge-private',lbl:'Private'}]},
-    {id:'8-25',date:'2026-08-25',dateNum:25,dow:'Tue',title:'Departure',sub:'Whistler → YVR',priv:'private',filter:'us',badges:[{cls:'badge-us',lbl:'Us Only'}]},
+    {id:'8-20',date:'2026-07-20',dateNum:20,dow:'Thu',title:'Arrival Day',sub:'YVR → Whistler',priv:'private',filter:'us',badges:[{cls:'badge-us',lbl:'Us Only'},{cls:'badge-private',lbl:'Private'}]},
+    {id:'8-21',date:'2026-07-21',dateNum:21,dow:'Fri',title:'Explore Whistler',sub:'Village · Gondola · Spa',priv:'public',filter:'tbd',badges:[{cls:'badge-tbd',lbl:'TBD Who Joins'}]},
+    {id:'8-22',date:'2026-07-22',dateNum:22,dow:'Sat',title:'Wedding Day',sub:'Nita Lake Lodge · Whistler',priv:'public',filter:'wedding',badges:[{cls:'badge-wedding',lbl:'Wedding'}]},
+    {id:'8-23',date:'2026-07-23',dateNum:23,dow:'Sun',title:'Post-Wedding Brunch',sub:'Friends + family · 11 AM',priv:'public',filter:'all',badges:[{cls:'badge-all',lbl:'All Family'}]},
+    {id:'8-24',date:'2026-07-24',dateNum:24,dow:'Mon',title:'Hike Day',sub:'Garibaldi Lake · Full day',priv:'private',filter:'us',badges:[{cls:'badge-us',lbl:'Us Only'},{cls:'badge-private',lbl:'Private'}]},
+    {id:'8-25',date:'2026-07-25',dateNum:25,dow:'Tue',title:'Departure',sub:'Whistler → YVR',priv:'private',filter:'us',badges:[{cls:'badge-us',lbl:'Us Only'}]},
   ];
 }
 
@@ -892,7 +892,7 @@ function toggleTheme(){
 }
 
 (function(){
-  const diff=Math.ceil((new Date('2026-08-22T00:00:00')-new Date())/86400000);
+  const diff=Math.ceil((new Date('2026-07-22T00:00:00')-new Date())/86400000);
   const txt=diff>0?diff+' days away':'Today \u2665';
   const pill=document.getElementById('heroPill');
   if(pill)pill.textContent=txt;
@@ -1045,23 +1045,23 @@ let allActivities=[];
 async function loadAndRenderItinerary(){
   // DEMO: hardcoded dummy activities
   allActivities=[
-    {id:'act-1',day_date:'2026-08-20',time_label:'2:00 PM',name:'Arrive at YVR',detail:'Depart from Toronto · Air Canada · Confirmation: XK7291',is_optional:false,privacy:'private',sort_order:1},
-    {id:'act-2',day_date:'2026-08-20',time_label:'5:30 PM',name:'Pick up rental car',detail:'Enterprise · Sea-to-Sky Highway',is_optional:false,privacy:'private',sort_order:2},
-    {id:'act-3',day_date:'2026-08-20',time_label:'7:00 PM',name:'Check in — Nita Lake Lodge',detail:'2131 Lake Placid Rd, Whistler, BC',is_optional:false,privacy:'private',sort_order:3},
-    {id:'act-4',day_date:'2026-08-20',time_label:'Evening',name:'Dinner at Nita Lake Patio',detail:'Sunset views over the lake',is_optional:false,privacy:'private',sort_order:4},
-    {id:'act-5',day_date:'2026-08-21',time_label:'9:00 AM',name:'Breakfast at Stonesedge Kitchen',detail:'Best eggs benny in Whistler',is_optional:false,privacy:'public',sort_order:1},
-    {id:'act-6',day_date:'2026-08-21',time_label:'11:00 AM',name:'Peak 2 Peak Gondola',detail:'360° views · Book tickets in advance',is_optional:false,privacy:'public',sort_order:2},
-    {id:'act-7',day_date:'2026-08-21',time_label:'2:00 PM',name:'Whistler Village walk',detail:'Shops, galleries, mountain air',is_optional:false,privacy:'public',sort_order:3},
-    {id:'act-8',day_date:'2026-08-21',time_label:'4:00 PM',name:'Spa at Scandinave',detail:'Nordic baths · Book ahead · Couples package',is_optional:true,privacy:'public',sort_order:4},
-    {id:'act-9',day_date:'2026-08-21',time_label:'7:30 PM',name:'Rehearsal Dinner',detail:'Araxi Restaurant · Private dining room',is_optional:false,privacy:'public',sort_order:5},
-    {id:'act-10',day_date:'2026-08-22',time_label:'All Day',name:'The Wedding',detail:'Nita Lake Lodge · Whistler, BC',is_optional:false,privacy:'public',sort_order:1},
-    {id:'act-11',day_date:'2026-08-23',time_label:'11:00 AM',name:'Post-Wedding Brunch',detail:'Bearfoot Bistro · Private event',is_optional:false,privacy:'public',sort_order:1},
-    {id:'act-12',day_date:'2026-08-23',time_label:'3:00 PM',name:'Farewell drinks at Longhorn Saloon',detail:'Whoever wants to join',is_optional:true,privacy:'public',sort_order:2},
-    {id:'act-13',day_date:'2026-08-24',time_label:'7:00 AM',name:'Depart for Garibaldi Lake',detail:'~2.5 hr hike · Bring bear spray · Pack lunch',is_optional:false,privacy:'private',sort_order:1},
-    {id:'act-14',day_date:'2026-08-24',time_label:'Hike',name:'Garibaldi Lake Trail',detail:'18km round trip · Stunning glacier views',is_optional:false,privacy:'private',sort_order:2},
-    {id:'act-15',day_date:'2026-08-24',time_label:'Evening',name:'Celebratory dinner',detail:'Just us · Caramba! Restaurant',is_optional:false,privacy:'private',sort_order:3},
-    {id:'act-16',day_date:'2026-08-25',time_label:'10:00 AM',name:'Check out',detail:'Nita Lake Lodge',is_optional:false,privacy:'private',sort_order:1},
-    {id:'act-17',day_date:'2026-08-25',time_label:'1:30 PM',name:'YVR → Home',detail:'Air Canada · Confirmation: XK7291',is_optional:false,privacy:'private',sort_order:2},
+    {id:'act-1',day_date:'2026-07-20',time_label:'2:00 PM',name:'Arrive at YVR',detail:'Depart from Toronto · Air Canada · Confirmation: XK7291',is_optional:false,privacy:'private',sort_order:1},
+    {id:'act-2',day_date:'2026-07-20',time_label:'5:30 PM',name:'Pick up rental car',detail:'Enterprise · Sea-to-Sky Highway',is_optional:false,privacy:'private',sort_order:2},
+    {id:'act-3',day_date:'2026-07-20',time_label:'7:00 PM',name:'Check in — Nita Lake Lodge',detail:'2131 Lake Placid Rd, Whistler, BC',is_optional:false,privacy:'private',sort_order:3},
+    {id:'act-4',day_date:'2026-07-20',time_label:'Evening',name:'Dinner at Nita Lake Patio',detail:'Sunset views over the lake',is_optional:false,privacy:'private',sort_order:4},
+    {id:'act-5',day_date:'2026-07-21',time_label:'9:00 AM',name:'Breakfast at Stonesedge Kitchen',detail:'Best eggs benny in Whistler',is_optional:false,privacy:'public',sort_order:1},
+    {id:'act-6',day_date:'2026-07-21',time_label:'11:00 AM',name:'Peak 2 Peak Gondola',detail:'360° views · Book tickets in advance',is_optional:false,privacy:'public',sort_order:2},
+    {id:'act-7',day_date:'2026-07-21',time_label:'2:00 PM',name:'Whistler Village walk',detail:'Shops, galleries, mountain air',is_optional:false,privacy:'public',sort_order:3},
+    {id:'act-8',day_date:'2026-07-21',time_label:'4:00 PM',name:'Spa at Scandinave',detail:'Nordic baths · Book ahead · Couples package',is_optional:true,privacy:'public',sort_order:4},
+    {id:'act-9',day_date:'2026-07-21',time_label:'7:30 PM',name:'Rehearsal Dinner',detail:'Araxi Restaurant · Private dining room',is_optional:false,privacy:'public',sort_order:5},
+    {id:'act-10',day_date:'2026-07-22',time_label:'All Day',name:'The Wedding',detail:'Nita Lake Lodge · Whistler, BC',is_optional:false,privacy:'public',sort_order:1},
+    {id:'act-11',day_date:'2026-07-23',time_label:'11:00 AM',name:'Post-Wedding Brunch',detail:'Bearfoot Bistro · Private event',is_optional:false,privacy:'public',sort_order:1},
+    {id:'act-12',day_date:'2026-07-23',time_label:'3:00 PM',name:'Farewell drinks at Longhorn Saloon',detail:'Whoever wants to join',is_optional:true,privacy:'public',sort_order:2},
+    {id:'act-13',day_date:'2026-07-24',time_label:'7:00 AM',name:'Depart for Garibaldi Lake',detail:'~2.5 hr hike · Bring bear spray · Pack lunch',is_optional:false,privacy:'private',sort_order:1},
+    {id:'act-14',day_date:'2026-07-24',time_label:'Hike',name:'Garibaldi Lake Trail',detail:'18km round trip · Stunning glacier views',is_optional:false,privacy:'private',sort_order:2},
+    {id:'act-15',day_date:'2026-07-24',time_label:'Evening',name:'Celebratory dinner',detail:'Just us · Caramba! Restaurant',is_optional:false,privacy:'private',sort_order:3},
+    {id:'act-16',day_date:'2026-07-25',time_label:'10:00 AM',name:'Check out',detail:'Nita Lake Lodge',is_optional:false,privacy:'private',sort_order:1},
+    {id:'act-17',day_date:'2026-07-25',time_label:'1:30 PM',name:'YVR → Home',detail:'Air Canada · Confirmation: XK7291',is_optional:false,privacy:'private',sort_order:2},
   ];
   renderItinerary();
   const journalTab=document.getElementById('tab-journal');
@@ -1469,14 +1469,14 @@ let editingTripSection=null;
 async function loadTripInfo(){
   // DEMO: dummy trip info
   tripInfoData=[
-    {section:'lodging',label:'Nita Lake Lodge · Aug 20–25',value:'2131 Lake Placid Rd, Whistler, BC V0N 1B2',value_type:'address',sort_order:1},
+    {section:'lodging',label:'Nita Lake Lodge · Jul 20–25',value:'2131 Lake Placid Rd, Whistler, BC V0N 1B2',value_type:'address',sort_order:1},
     {section:'car',label:'Company',value:'Enterprise · Aeroplan Member',value_type:'text',sort_order:1},
     {section:'car',label:'Confirmation',value:'E-7291-XK',value_type:'mono',sort_order:2},
-    {section:'car',label:'Pickup',value:'Thu Aug 20 · 3:30 PM · YVR',value_type:'text',sort_order:3},
-    {section:'car',label:'Return',value:'Tue Aug 25 · 12:00 PM · YVR',value_type:'text',sort_order:4},
+    {section:'car',label:'Pickup',value:'Thu Jul 20 · 3:30 PM · YVR',value_type:'text',sort_order:3},
+    {section:'car',label:'Return',value:'Tue Jul 25 · 12:00 PM · YVR',value_type:'text',sort_order:4},
     {section:'flights',label:'Carrier · Confirmation',value:'Air Canada · XK7291',value_type:'text',sort_order:1},
-    {section:'flights',label:'Outbound · Aug 20',value:'YYZ → YVR  2:00 PM – 4:30 PM',value_type:'flight',sort_order:2},
-    {section:'flights',label:'Return · Aug 25',value:'YVR → YYZ  3:00 PM – 10:30 PM',value_type:'flight',sort_order:3},
+    {section:'flights',label:'Outbound · Jul 20',value:'YYZ → YVR  2:00 PM – 4:30 PM',value_type:'flight',sort_order:2},
+    {section:'flights',label:'Return · Jul 25',value:'YVR → YYZ  3:00 PM – 10:30 PM',value_type:'flight',sort_order:3},
   ];
   renderTripInfo();
 }
@@ -1543,7 +1543,7 @@ function deleteRowBtn(id){
 // ── LODGING MODAL ─────────────────────────────────────
 function buildLodgingModal(){
   const rows=tripInfoData.filter(r=>r.section==='lodging').sort((a,b)=>a.sort_order-b.sort_order);
-  // parse stored values back — label = "Airbnb · Aug 20–25", value = address
+  // parse stored values back — label = "Airbnb · Jul 20–25", value = address
   let html=`<div id="lodgingRows">`;
   rows.forEach((r,i)=>{
     const parts=r.label.split(' · ');
@@ -1552,7 +1552,7 @@ function buildLodgingModal(){
     html+=`<div id="lodgingRow-${i}" style="position:relative;padding-right:24px;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 30px 10px 12px;margin-bottom:8px;">
       ${deleteRowBtn('lodgingRow-'+i)}
       ${tripSelect('Type','lodgingType-'+i,type,['Airbnb','Hotel','Vrbo','Condo','Other'])}
-      ${tripField('Dates','lodgingDates-'+i,dates,'e.g. Aug 20–25')}
+      ${tripField('Dates','lodgingDates-'+i,dates,'e.g. Jul 20–25')}
       ${tripField('Address','lodgingAddr-'+i,r.value,'Street address, City, Province')}
     </div>`;
   });
@@ -1569,7 +1569,7 @@ function addLodgingRow(){
   div.style.cssText='position:relative;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 30px 10px 12px;margin-bottom:8px;';
   div.innerHTML=deleteRowBtn(id)
     +tripSelect('Type','lodgingType-'+id,'Airbnb',['Airbnb','Hotel','Vrbo','Condo','Other'])
-    +tripField('Dates','lodgingDates-'+id,'','e.g. Aug 20–25')
+    +tripField('Dates','lodgingDates-'+id,'','e.g. Jul 20–25')
     +tripField('Address','lodgingAddr-'+id,'','Street address, City, Province');
   document.getElementById('lodgingRows').appendChild(div);
 }
@@ -1580,8 +1580,8 @@ function buildCarModal(){
   tripInfoData.filter(r=>r.section==='car').forEach(r=>{byLabel[r.label]=r;});
   return tripField('Company','carCompany',byLabel['Company']?.value||'','e.g. National · Emerald Club')
     +tripField('Confirmation #','carConfirm',byLabel['Confirmation']?.value||'')
-    +tripField('Pickup','carPickup',byLabel['Pickup']?.value||'','e.g. Thu Aug 20 · 3:30 PM · YVR')
-    +tripField('Return','carReturn',byLabel['Return']?.value||'','e.g. Tue Aug 25 · 12:00 PM · YVR');
+    +tripField('Pickup','carPickup',byLabel['Pickup']?.value||'','e.g. Thu Jul 20 · 3:30 PM · YVR')
+    +tripField('Return','carReturn',byLabel['Return']?.value||'','e.g. Tue Jul 25 · 12:00 PM · YVR');
 }
 
 // ── FLIGHTS MODAL ─────────────────────────────────────
@@ -1599,7 +1599,7 @@ function buildFlightsModal(){
     const id='flightLeg-'+i;
     html+=`<div id="${id}" style="position:relative;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 30px 10px 12px;margin-bottom:8px;">
       ${deleteRowBtn(id)}
-      ${tripField('Label','flightLabel-'+i,r.label,'e.g. Outbound · Aug 20')}
+      ${tripField('Label','flightLabel-'+i,r.label,'e.g. Outbound · Jul 20')}
       <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-4);margin-bottom:4px;">Legs (one per line, route + times)</div>
       <textarea id="flightValue-${i}" rows="3" placeholder="MCO → YYZ  11:30 AM – 2:30 PM&#10;YYZ → YYC  3:50 PM – 6:10 PM" style="width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg-sunken);color:var(--text);font-family:var(--font-ui);font-size:14px;outline:none;resize:none;line-height:1.5;box-sizing:border-box;">${r.value||''}</textarea>
     </div>`;
@@ -1617,7 +1617,7 @@ function addFlightLeg(){
   div.id=id;
   div.style.cssText='position:relative;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 30px 10px 12px;margin-bottom:8px;';
   div.innerHTML=deleteRowBtn(id)
-    +tripField('Label','flightLabel-'+i,'','e.g. Return · Aug 25')
+    +tripField('Label','flightLabel-'+i,'','e.g. Return · Jul 25')
     +`<div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-4);margin-bottom:4px;">Legs (one per line)</div>
     <textarea id="flightValue-${i}" rows="2" placeholder="YYC → MCO  9:00 AM – 4:15 PM" style="width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg-sunken);color:var(--text);font-family:var(--font-ui);font-size:14px;outline:none;resize:none;line-height:1.5;box-sizing:border-box;"></textarea>`;
   document.getElementById('flightLegs').appendChild(div);
@@ -1774,7 +1774,7 @@ async function loadChecklist(){
   // DEMO: dummy checklist
   checklistItems=[
     {id:'cl1',name:'Book Scandinave Spa',notes:'Couples package · Need to reserve 2 weeks ahead',checked:false,sort_order:1},
-    {id:'cl2',name:'Pack hiking boots',notes:'For Garibaldi Lake on Aug 24',checked:false,sort_order:2},
+    {id:'cl2',name:'Pack hiking boots',notes:'For Garibaldi Lake on Jul 24',checked:false,sort_order:2},
     {id:'cl3',name:'Buy bear spray',notes:'Required for Garibaldi trail',checked:false,sort_order:3},
     {id:'cl4',name:'Confirm rehearsal dinner headcount',notes:'Araxi needs final numbers by Aug 10',checked:false,sort_order:4},
     {id:'cl5',name:'Download offline maps',notes:'Whistler area — no cell service on trail',checked:false,sort_order:5},
@@ -2292,7 +2292,7 @@ function buildOverview(){
   const list=document.getElementById('ovList');
   if(!list)return;
   list.innerHTML='';
-  const diff=Math.ceil((new Date('2026-08-22T00:00:00')-new Date())/86400000);
+  const diff=Math.ceil((new Date('2026-07-22T00:00:00')-new Date())/86400000);
   const big=document.getElementById('ovBig');
   if(big)big.textContent=diff>0?diff:'0';
   const isFamilyView=currentView==='family';
@@ -2403,12 +2403,12 @@ if(dc)mo.observe(dc,{childList:true,subtree:false});
 
 /* ── JOURNAL ─────────────────────────────────────────── */
 const JOURNAL_DAYS=[
-  {date:'2026-08-20',label:'Aug 20',dow:'Thu',title:'Arrival Day'},
-  {date:'2026-08-21',label:'Aug 21',dow:'Fri',title:'Explore Whistler'},
-  {date:'2026-08-22',label:'Aug 22',dow:'Sat',title:'Wedding Day'},
-  {date:'2026-08-23',label:'Aug 23',dow:'Sun',title:'Post-Wedding Brunch'},
-  {date:'2026-08-24',label:'Aug 24',dow:'Mon',title:'Hike Day'},
-  {date:'2026-08-25',label:'Aug 25',dow:'Tue',title:'Departure'},
+  {date:'2026-07-20',label:'Jul 20',dow:'Thu',title:'Arrival Day'},
+  {date:'2026-07-21',label:'Jul 21',dow:'Fri',title:'Explore Whistler'},
+  {date:'2026-07-22',label:'Jul 22',dow:'Sat',title:'Wedding Day'},
+  {date:'2026-07-23',label:'Jul 23',dow:'Sun',title:'Post-Wedding Brunch'},
+  {date:'2026-07-24',label:'Jul 24',dow:'Mon',title:'Hike Day'},
+  {date:'2026-07-25',label:'Jul 25',dow:'Tue',title:'Departure'},
 ];
 
 let journalCurrentDate=null;
