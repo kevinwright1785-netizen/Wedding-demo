@@ -368,7 +368,7 @@
     </h1>
 
     <p class="subtext">
-      A custom, mobile-first app for your wedding trip — built just for you and your family. No logins, no learning curve. Just open and go.
+      A custom, mobile-first app for your trip — built just for you and your group. No learning curve. Just open and go.
     </p>
 
     <div class="features">
@@ -403,15 +403,9 @@
 
         <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
 
-          <div class="field-row">
-            <div class="field">
-              <label>Your name *</label>
-              <input type="text" id="name" placeholder="Sarah" required>
-            </div>
-            <div class="field">
-              <label>Partner's name *</label>
-              <input type="text" id="partner" placeholder="James">
-            </div>
+          <div class="field">
+            <label>Full name *</label>
+            <input type="text" id="name" placeholder="Sarah Johnson" required>
           </div>
 
           <div class="field">
@@ -419,9 +413,14 @@
             <input type="email" id="email" placeholder="sarah@email.com" required>
           </div>
 
+          <div class="field">
+            <label>Phone number</label>
+            <input type="tel" id="phone" placeholder="(555) 000-0000">
+          </div>
+
           <div class="field-row">
             <div class="field">
-              <label>Wedding date *</label>
+              <label>Event date *</label>
               <input type="text" id="weddingDate" placeholder="e.g. Aug 22, 2026" required>
             </div>
             <div class="field">
@@ -549,9 +548,9 @@ async function handleSubmit(e) {
 
   const data = {
     name,
-    partner: document.getElementById('partner').value.trim(),
+    phone: document.getElementById('phone').value.trim(),
     email,
-    weddingDate,
+    eventDate: document.getElementById('weddingDate').value.trim(),
     destination: document.getElementById('destination').value.trim(),
     message: document.getElementById('message').value.trim(),
   };
